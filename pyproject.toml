@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "metal1hone-traceid"
+version = "0.1.0"
+description = "沿链路检查 ID 的传递，标出断链位置与生成重复"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "metal1hone" }]
+keywords = ["analysis", "observability", "evaluation", "rag"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://metal1hone.github.io"
+Repository = "https://github.com/metal1hone/traceid"
+Issues = "https://github.com/metal1hone/traceid/issues"
+
+[project.scripts]
+traceid = "traceid:main"
+
+[tool.setuptools]
+py-modules = ["traceid"]
